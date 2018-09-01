@@ -1,0 +1,8 @@
+.footerWrapper {
+  background: black;
+  color: white;
+  text-align: center;
+}
+.footerWrapper span{
+    cursor: none;
+}

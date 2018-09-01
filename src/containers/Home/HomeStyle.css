@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.header {
+  grid-area: cabecalho;
+}
+
+.img-thumbnail {
+  grid-area: imgPerfil;
+}
+
+.texto-sobre {
+  grid-area: textoSobre;
+}
+
+.about {
+  grid-area: sobre;
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+.contact {
+  grid-area: contato;
+}
+
+.footer {
+  grid-area: rodape;
+}
+
+/* body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 56px .5fr 2fr .5fr 30px;
+    grid-template-areas: 
+      'navbar navbar'
+      'sobre cabecalho'
+      'sobre portfolio'
+      'sobre contato'
+      'rodape rodape';
+  } */
+
+span.pink {
+  color: #f92672;
+}
+
+span.green {
+  color: #a6e22e;
+}
+
+span.blue {
+  color: #66d9ef;
+}
+
+span.orange {
+  color: #fd971f;
+}
+
+span.purple {
+  color: #ae81ff;
+}
+
+span.yellow {
+  color: #ffe792;
+}
+
+.navbar {
+  background-color: #272822;
+}
+
+.navbar-toggler {
+  border-color: #a5a5a5 !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(165, 165, 165, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.navbar a {
+  color: #a5a5a5;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a:hover {
+  color: #343a40;
+}
+
+.header {
+  font-family: "Lucida Console", Roboto, sans-serif;
+  padding-top: 60px;
+  /*   padding-bottom:100px; */
+  color: #fbfffe;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+  background: url("https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat center center fixed;
+  background-size: cover;
+  min-height: 350px;
+  text-align: center;
+}
+
+.header i {
+  color: #6d676e;
+  font-size: 2.5em;
+  padding-bottom: 30px;
+}
+
+.about {
+  font-family: "Lucida Console", sans-serif;
+  padding-bottom: 100px;
+  color: #f8f8f2;
+  background-color: #272822;
+  /* background-color: rgba(39, 40, 34, 0.6); */
+  /*
+    background: url('https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
+    background-size: cover;
+    */
+  min-height: 650px;
+  text-align: center;
+  border-right: 1px solid #555;
+}
+
+.about p,
+span {
+  text-align: justify;
+  color: #f8f8f2;
+}
+
+.about a {
+  color: #a5a5a5;
+}
+
+.about div.align-items-center {
+  padding-top: 30px;
+}
+
+.about img#foto-perfil {
+  border: 2px solid #aee22e;
+  background: none;
+  /*background-color: #F92672; */
+  padding: 0px;
+  margin-bottom: 15px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #1e1f21;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio {
+  font-family: Roboto, sans-serif;
+  /* background-color: transparent; */
+  background-color: #272822;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.portfolio::before {
+  height: 10px;
+  background: /* gradient can be an image */ linear-gradient(
+    to left,
+    rgba(92, 7, 52, 1) 0%,
+    rgba(134, 29, 84, 1) 12%,
+    rgba(255, 93, 177, 1) 47%,
+    rgba(83, 0, 30, 1) 100%
+  );
+  background-size: 100% 5px;
+}
+
+.portfolio h1 {
+  font-family: "Lucida Console", Roboto, sans-serif;
+  color: #ccc;
+  padding-bottom: 40px;
+}
+
+.portfolio a {
+  color: #343a40;
+}
+
+.card-deck {
+  margin-bottom: 10px;
+}
+
+.card {
+  border-color: #343a40;
+  background: #47484278;
+}
+.glassy-border {
+  /* background: #f0edcc; */
+  background-clip: padding-box;
+  border: 1.2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 3px rgba(0, 0, 0, 0.8),
+    1px 1px 0 rgba(0, 0, 0, 0.8) inset, -1px -1px 0 rgba(0, 0, 0, 0.8) inset;
+  padding: 10px;
+}
+.card-title {
+  color: white;
+}
+.card-text {
+  color: #707070;
+}
+
+@keyframes hover-shadow {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+.hover-shadow {
+  display: inline-block;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hover-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform opacity;
+}
+.hover-shadow:hover {
+  transform: translateY(-6px);
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.hover-shadow:hover:before {
+  opacity: 0.4;
+  transform: translateY(6px);
+  animation-name: hover-shadow;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.contact {
+  font-family: Roboto, "Lucida Console", sans-serif;
+  padding-top: 50px;
+  border-radius: 1%;
+  background: url("https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+    no-repeat center center fixed;
+  background-size: cover;
+  /* min-height: 650px;*/
+}
+
+.contact h1,
+.contact h4 {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.contact h1 {
+  font-family: "Lucida Console", Roboto, sans-serif;
+  padding-bottom: 25px;
+}
+
+.contact h4 {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.contact button {
+  margin: 1%;
+}
+.contact button a {
+  padding: 5px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer {
+  font-family: "Lucida Console" Roboto, sans-serif;
+  background-color: #272822;
+  color: #ccc;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .about img#foto-perfil {
+    max-width: 250px;
+  }
+}
