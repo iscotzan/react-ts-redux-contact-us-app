@@ -1,6 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import "./HomeStyle.css";
+import ScrollAnimation from "react-animate-on-scroll";
+
+import "./HomeStyle.scss";
 import ContactUsForm from "./../ContactUsForm";
 import Portfolio from "./../../components/Portfolio/Portfolio";
 import PortfolioHeader from "./../../components/Portfolio/PortfolioHeader/PortfolioHeader";
@@ -46,6 +48,7 @@ class Home extends React.Component<Props, State> {
           <Container>
             <Row>
               <Col sm={"12"}>
+                <br />
                 <h1>
                   <span className="pink">About</span>
                 </h1>
@@ -54,15 +57,19 @@ class Home extends React.Component<Props, State> {
             <Row>
               <AboutSection guestName={this.props.guestName} />
             </Row>
-            <Portfolio />
+            <ScrollAnimation animateIn="zoomIn" animateOut="zoomOut">
+
+              {" "}
+              <Portfolio />
+            </ScrollAnimation>
             <div className="contact" id="contact">
-              <Container>
-                <h1 className="text-center text-light">
-                  Contact
-                </h1>
-                <ContactSocial /> <br />
-                <ContactUsForm />
-              </Container>{" "}
+              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                <Container>
+                  <h1 className="text-center text-light">Contact</h1>
+                  <ContactSocial /> <br />
+                  <ContactUsForm />
+                </Container>{" "}
+              </ScrollAnimation>
             </div>{" "}
           </Container>
         </div>
@@ -71,13 +78,13 @@ class Home extends React.Component<Props, State> {
   }
 }
 export function mapStateToProps(state: any) {
-    const { contactUs } = state;
-    //   console.log("stateToProps: ", contactUs);
-    //   console.log("ze state: ", state);
-    return {
-      guestName: contactUs.values.name,
-    };
-  }
+  const { contactUs } = state;
+  //   console.log("stateToProps: ", contactUs);
+  //   console.log("ze state: ", state);
+  return {
+    guestName: contactUs.values.name
+  };
+}
 export default connect(
   mapStateToProps,
   null

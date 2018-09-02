@@ -17,7 +17,7 @@ const AboutSection = (props: any) => {
         />
       </Col>
       <Col xs={12} md={{ size: 10, offset: 1 }} className="texto-sobre">
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
           <p>
             Hello
             {props.guestName ? (
@@ -48,7 +48,7 @@ const AboutSection = (props: any) => {
           </p>
         </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+          <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
         <p>
             I am <span className="blue"> passionate</span> about{" "}
             <code>C0d3</code>{" "}
@@ -70,7 +70,7 @@ const AboutSection = (props: any) => {
         </p>
           </ScrollAnimation>
         <br />
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
           <StrengthList />
         </ScrollAnimation>
       </Col>

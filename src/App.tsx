@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "./App.css";
+import "./App.scss";
 
 // import Hello from "./components/Hello";
 import StatefulHello from "./components/Hello/StatefulHello";
