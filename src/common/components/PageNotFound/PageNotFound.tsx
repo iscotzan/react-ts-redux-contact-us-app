@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./PageNotFound.css";
+import "./PageNotFound.scss";
 export interface IProps {
   children?: React.ReactNode;
 }
@@ -8,9 +8,8 @@ export interface IProps {
 
 export const PageNotFound: React.SFC<IProps> = () => {
   return (
-    <div className={"PageNotFoundWrapper"}>
-      <code>{"{"}--<span>:++ 404 NOT FOUND ++:</span>--"{"}"}</code>
-      {/* <code>{"404 NOT FOUND"}</code> */}
+    <div className="pageNotFoundWrapper">
+      <h1 className="retroshadow">404: Page Not Found</h1>
     </div>
   );
 };
