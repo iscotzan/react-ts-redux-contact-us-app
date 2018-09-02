@@ -27,7 +27,8 @@ class Home extends React.Component<Props, State> {
   }
 
   render() {
-    const animationDuration = 0.80901699437;
+    const goldenRatio = 1.61803398875;
+    const animationDuration = goldenRatio / 2;
 
     return (
       <div className="Portfolio-Page">

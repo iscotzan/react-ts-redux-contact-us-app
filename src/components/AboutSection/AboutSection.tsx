@@ -4,10 +4,11 @@ import StrengthList from "./../StrengthsList/StrengthsList";
 import ScrollAnimation from "react-animate-on-scroll";
 // export class AboutSection extends React.Component<IFormProps, IFormState> {
 
-  const animationIn = "fadeInUp";
-  // const animationIn = "fadeIn";
+const animationIn = "fadeInUp";
+// const animationIn = "fadeIn";
 const animationOut = "fadeOut";
-const animationDuration = 0.80901699437;
+const goldenRatio = 1.61803398875;
+const animationDuration = goldenRatio / 2;
 const AboutSection = (props: any) => {
   return (
     <Col className={"offset-2 col-8"} id="divFoto">
