@@ -10,9 +10,9 @@ import AboutSection from "./../../components/AboutSection/AboutSection";
 import ContactSocial from "./../../components/ContactSocial/ContactSocial";
 export interface Props {
   children?: React.ReactNode;
-  socialUrls: any;
-  header: string;
-  description: any;
+  // socialUrls: any;
+  // header: string;
+  // description: any;
   guestName?: string;
 }
 
@@ -27,11 +27,7 @@ class Home extends React.Component<Props, State> {
   }
 
   render() {
-    // const props = propsObj;
-    // const that = this;
-
-    // const { header, socialUrls } = propsObj;
-    // const { twitter, github, linkedIn, freeCodeCamp } = socialUrls;
+    const animationDuration = 0.80901699437;
 
     return (
       <div className="Portfolio-Page">
@@ -57,19 +53,20 @@ class Home extends React.Component<Props, State> {
             <Row>
               <AboutSection guestName={this.props.guestName} />
             </Row>
-            <ScrollAnimation animateIn="zoomIn" animateOut="zoomOut">
-
+            <ScrollAnimation
+              animateIn="zoomIn"
+              animateOut="zoomOut"
+              duration={animationDuration}
+            >
               {" "}
               <Portfolio />
             </ScrollAnimation>
             <div className="contact" id="contact">
-              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-                <Container>
-                  <h1 className="text-center text-light">Contact</h1>
-                  <ContactSocial /> <br />
-                  <ContactUsForm />
-                </Container>{" "}
-              </ScrollAnimation>
+              <Container>
+                <h1 className="text-center text-light">Contact</h1>
+                <ContactSocial /> <br />
+                <ContactUsForm />
+              </Container>{" "}
             </div>{" "}
           </Container>
         </div>

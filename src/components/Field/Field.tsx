@@ -26,6 +26,7 @@ export const Field: React.SFC<IFieldProps> = ({
    */
   const getEditorStyle = (errors: IErrors): any =>
     getError(errors) ? { borderColor: "red" } : {};
+
   return (
     <FormContext.Consumer>
       {(context: IFormContext) => (
@@ -41,7 +42,9 @@ export const Field: React.SFC<IFieldProps> = ({
                 context.setValues({ [id]: e.currentTarget.value })
               }
               onBlur={() => context.validate(id, value)}
-              style={getEditorStyle(context.errors)}
+              style={
+                context !== undefined ? getEditorStyle(context.errors) : null
+              }
               className="form-control"
             />
           )}
@@ -54,7 +57,9 @@ export const Field: React.SFC<IFieldProps> = ({
                 context.setValues({ [id]: e.currentTarget.value })
               }
               onBlur={() => context.validate(id, value)}
-              style={getEditorStyle(context.errors)}
+              style={
+                context !== undefined ? getEditorStyle(context.errors) : null
+              }
               className="form-control"
             />
           )}
@@ -68,7 +73,9 @@ export const Field: React.SFC<IFieldProps> = ({
                 context.setValues({ [id]: e.currentTarget.value })
               }
               onBlur={() => context.validate(id, value)}
-              style={getEditorStyle(context.errors)}
+              style={
+                context !== undefined ? getEditorStyle(context.errors) : null
+              }
               className="form-control"
             >
               {options &&
@@ -80,11 +87,15 @@ export const Field: React.SFC<IFieldProps> = ({
             </select>
           )}
 
-          {getError(context.errors) && (
-            <div style={{ color: "red", fontSize: "80%" }}>
-              <p>{getError(context.errors)}</p>
-            </div>
-          )}
+          {context !== undefined
+            ? getError(context.errors) && (
+                <div style={{ color: "red", fontSize: "80%" }}>
+                  <p>
+                    {context !== undefined ? getError(context.errors) : null}
+                  </p>
+                </div>
+              )
+            : null}
         </div>
       )}
     </FormContext.Consumer>

@@ -56,7 +56,7 @@ const Porfolio = () => {
   return (
     <div className="portfolio" id="portfolio">
       <Container>
-        <h1 className="text-center">Portfolio</h1>
+        <h1 className="text-center">Open Source Portfolio</h1>
         {/* <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutRight"> */}
           <CardDeck>
             <PortfolioCard projectData={projects[0]} />

@@ -10,8 +10,9 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
+  DropdownItem
 } from "reactstrap";
+import "./Menus.scss";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import * as actions from "./../../../actions";
@@ -41,11 +42,11 @@ class Menus extends React.Component<IProps, IState> {
   }
 
   render() {
-    console.log("menus state: ", this.props.context);
+    // console.log("menus state: ", this.props.context);
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="#/">Contact Us ©</NavbarBrand>
+          <NavbarBrand className={"logoBrand"} href="#/">Contact Us ©</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

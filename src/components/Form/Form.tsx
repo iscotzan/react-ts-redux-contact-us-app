@@ -23,7 +23,7 @@ export const FormContext = React.createContext<IFormContext | undefined>(
  * @returns {string} - The error message
  */
 export const required = (value: string, fieldName: string): string => {
-  console.log("required validation: ", value, fieldName);
+  // console.log("required validation: ", value, fieldName);
   return value === undefined || value === null || value === ""
     ? "This must be populated"
     : "";
@@ -68,7 +68,7 @@ export class Form extends React.Component<IFormProps, IFormState> {
       errors,
       values
     };
-    console.log("FORM state: ", this.state);
+    // console.log("FORM state: ", this.state);
   }
   /**
    * Stores new field values in state
@@ -104,7 +104,7 @@ export class Form extends React.Component<IFormProps, IFormState> {
     e: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
     e.preventDefault();
-    console.log(this.props);
+    // console.log(this.props);
     if (this.validateForm(this.props.formValues)) {
       const submitSuccess: boolean = await this.submitForm();
       this.setState({ submitSuccess });
@@ -118,7 +118,7 @@ export class Form extends React.Component<IFormProps, IFormState> {
   private validateForm(formValues: IFormValuesProps): boolean {
     const errors: IErrors = {};
     Object.keys(this.props.fields).map((fieldName: string) => {
-      console.log(this.props.fields[fieldName]);
+      // console.log(this.props.fields[fieldName]);
       errors[fieldName] = this.validate(fieldName, formValues[fieldName]);
     });
     this.setState({ errors });
@@ -177,6 +177,11 @@ export class Form extends React.Component<IFormProps, IFormState> {
         });
         this.setState({ errors });
       }
+      //this is a temp solution to allow messaging via the clients email software
+      const { reason, notes, name } = this.props.formValues;
+      const subject = `${reason} - ${name}`;
+      const body = notes;
+      window.location.href = `mailto:iscotzan@gmail.com?subject=${subject}&body=${body}`;
       return response.ok;
     } catch (ex) {
       return false;

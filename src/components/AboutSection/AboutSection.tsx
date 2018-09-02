@@ -3,6 +3,11 @@ import { Media, Col } from "reactstrap";
 import StrengthList from "./../StrengthsList/StrengthsList";
 import ScrollAnimation from "react-animate-on-scroll";
 // export class AboutSection extends React.Component<IFormProps, IFormState> {
+
+  const animationIn = "fadeInUp";
+  // const animationIn = "fadeIn";
+const animationOut = "fadeOut";
+const animationDuration = 0.80901699437;
 const AboutSection = (props: any) => {
   return (
     <Col className={"offset-2 col-8"} id="divFoto">
@@ -16,8 +21,12 @@ const AboutSection = (props: any) => {
           id="foto-perfil"
         />
       </Col>
-      <Col xs={12} md={{ size: 10, offset: 1 }} className="texto-sobre">
-        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+      <Col xs={12} md={{ size: 10, offset: 1 }} className="text-about">
+        <ScrollAnimation
+          duration={animationDuration}
+          animateIn={animationIn}
+          animateOut={animationOut}
+        >
           <p>
             Hello
             {props.guestName ? (
@@ -48,29 +57,35 @@ const AboutSection = (props: any) => {
           </p>
         </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-        <p>
+        <ScrollAnimation
+          duration={animationDuration}
+          animateIn={animationIn}
+          animateOut={animationOut}
+        >
+          <p>
             I am <span className="blue"> passionate</span> about{" "}
-            <code>C0d3</code>{" "}
-            and <span className="blue">experienced</span> in developing a
-            variety of <span className="green">successful web projects</span>,
-            using a wide{" "}
+            <code>C0d3</code> and <span className="blue">experienced</span> in
+            developing a variety of{" "}
+            <span className="green">successful web projects</span>, using a wide{" "}
             <span className="yellow">
               <code>[</code>
               array of technologies
               <code>]</code>
             </span>
-            .
-            I'm also well versed in creating
+            . I'm also well versed in creating
             <span className="orange">
               {" "}
               automated marketing systems
             </span> and{" "}
             <span className="orange"> customized admin applications</span>.
-        </p>
-          </ScrollAnimation>
+          </p>
+        </ScrollAnimation>
         <br />
-        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+        <ScrollAnimation
+          duration={animationDuration}
+          animateIn={animationIn}
+          animateOut={animationOut}
+        >
           <StrengthList />
         </ScrollAnimation>
       </Col>
