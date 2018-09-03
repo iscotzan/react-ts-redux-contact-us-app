@@ -13,6 +13,8 @@ Created for a technical test & educational purposes\
 - Responsive React Web Application
 - TypeScript
 - Redux
+- React-Router-Redux
+- Redux-Toastr
 - Testing with Jest  
 - Reactstrap
 - Sass/Scss configuration

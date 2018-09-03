@@ -51,7 +51,9 @@ class Menus extends React.Component<IProps, IState> {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#/contact">Contact</NavLink>
+                <NavLink href="#/">
+                <i className="fas fa-home" />
+                </NavLink>
               </NavItem>
               {/* <NavItem>
                 <NavLink href="/#about">About</NavLink>

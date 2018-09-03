@@ -1,4 +1,5 @@
 import * as constants from "../constants";
+import { toastr } from "react-redux-toastr";
 
 export interface IncrementEnthusiasm {
   type: constants.INCREMENT_ENTHUSIASM;
@@ -37,6 +38,7 @@ export function updateFormField(values: any): UpdateFormField {
   };
 }
 export function resetState(): ResetState {
+  toastr.success("Hey there John/Jane Doe", "The form state has been reset successfully");
   return {
     type: constants.RESET_STATE
   };

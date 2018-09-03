@@ -5,10 +5,13 @@ import * as ReactDOM from "react-dom";
 import registerServiceWorker from "./registerServiceWorker";
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "react-router-redux";
+import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./common/style/hover.css";
 import "./common/style/animate.css";
 import "./index.css";
+import ReduxToastr from "react-redux-toastr";
+
 // Import store and history
 import store, { history } from "./configureStore";
 
@@ -27,6 +30,13 @@ ReactDOM.render(
         <Menus />
         <div className="wrap">{routes}</div>
         <Footer />
+        <ReduxToastr
+          timeOut={4000}
+          preventDuplicates
+          position="top-left"
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+        />
       </div>
     </ConnectedRouter>
   </Provider>,
