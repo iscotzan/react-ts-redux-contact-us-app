@@ -36,7 +36,7 @@ const projects = [
     imageAlt: "Express Socket.io Chat App Image",
     Title: "Express-socket.io-chat-app",
     TextContent: `Real time, neatly designed, multiple users chat. Implementing
-    Socket.io, Express server, PHP backend with mySQL db, Authentication & Email verification.
+    Socket.io, Node.js (express) backend with a mySQL db, Authentication & Email verification.
     Created during "John-Bryce"
     FullStack/PHP developer course (2015-2016).`
   },
