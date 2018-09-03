@@ -12,7 +12,9 @@ export interface ProjectDataProps {
 export interface PortfolioCardProps {
   projectData: ProjectDataProps;
 }
-
+const imageLoaded = () => {
+  console.log('img loaded!');
+}
 const PorfolioCard = (props: PortfolioCardProps) => {
   const { link, imageSrc, imageAlt, Title, TextContent } = props.projectData;
   return (
@@ -22,6 +24,7 @@ const PorfolioCard = (props: PortfolioCardProps) => {
           className="card-img-top img-fluid"
           src={imageSrc}
           alt={imageAlt}
+          onLoad={()=> {imageLoaded()}}
         />
         <CardBody>
           <CardTitle>{Title}</CardTitle>
