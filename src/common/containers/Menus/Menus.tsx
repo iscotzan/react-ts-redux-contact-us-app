@@ -57,7 +57,7 @@ class Menus extends React.Component<IProps, IState> {
                 <NavLink href="/#about">About</NavLink>
               </NavItem> */}
               <NavItem>
-                <NavLink href="https://github.com/iscotzan/RCA-Redux-Router-Jest-Localization--starter-kit">
+                <NavLink href="https://github.com/iscotzan">
                   <i className="fab fa-github" />
                   {/* GitHub */}
                 </NavLink>
