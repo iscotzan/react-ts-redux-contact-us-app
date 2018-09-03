@@ -46,7 +46,7 @@ const projects = [
     imageAlt: "Inspirinotes Image",
     Title: "Inspirinotes",
     TextContent: `Inspirinotes is an Angular ToDo list project, complete with a
-    php backend and a mysql database. Created during "John-Bryce"
+    PHP backend with mySQL db, Authentication & Email verification. Created during "John-Bryce"
     FullStack/PHP developer course (2015-2016).`
   }
 ];
