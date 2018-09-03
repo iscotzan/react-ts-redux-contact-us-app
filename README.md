@@ -1,3 +1,28 @@
+
+# Contact Us/Portfolio React App  ✉
+Created for a technical test & educational purposes\
+[Demo](https://iscovici.herokuapp.com/)
+
+##### How to run?
+- <code>git clone https://github.com/iscotzan/react-ts-redux-contact-us-app.git</code>
+- <code>cd <project-directory\></code>
+- <code>npm i</code>
+- <code>npm start</code>
+
+##### What's in it?
+- Responsive React Web Application
+- TypeScript
+- Redux
+- Testing with Jest  
+- Reactstrap
+- Sass/Scss configuration
+- Scroll Animations
+- Form post to a mockAPI
+ - Free Images thanks to [pexels.com](https://www.pexels.com) 
+- All the benefits of using create-react-app as a starter kit
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
