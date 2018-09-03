@@ -5,11 +5,14 @@ import ScrollAnimation from "react-animate-on-scroll";
 // export class AboutSection extends React.Component<IFormProps, IFormState> {
 
 const animationIn = "fadeInUp";
-// const animationIn = "fadeIn";
+// const animationInSubtle = "fadeIn";
 const animationOut = "fadeOut";
 const goldenRatio = 1.61803398875;
 const animationDuration = goldenRatio / 2;
-const AboutSection = (props: any) => {
+interface IProps {
+  guestName?: string;
+}
+const AboutSection = (props: IProps) => {
   return (
     <Col className={"offset-2 col-8"} id="divFoto">
       <Col xs={{ size: 1 }} md={{ size: 4, offset: 4 }}>

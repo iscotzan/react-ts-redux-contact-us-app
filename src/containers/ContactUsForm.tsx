@@ -7,6 +7,7 @@ import { StoreState } from "../types/index";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { IProps } from "./contactUsForm.types";
+
 // const ContactUsForm: React.SFC = () => {
 function ContactUsForm({ name, email, reason, notes, onFieldUpdate }: IProps) {
   const fields: IFields = {
@@ -35,24 +36,23 @@ function ContactUsForm({ name, email, reason, notes, onFieldUpdate }: IProps) {
     }
   };
   return (
-    <Form
-      action="https://jsonplaceholder.typicode.com/posts"
-      fields={fields}
-      onFieldUpdate={onFieldUpdate}
-      formValues={{ name, email, reason, notes }}
-      render={() => (
-        <React.Fragment>
-          <div className="alert alert-info" role="alert">
-          If you wish to get in contact, send me a message!
-
-          </div>
-          <Field {...fields.name} value={name} />
-          <Field {...fields.email} value={email} />
-          <Field {...fields.reason} value={reason} />
-          <Field {...fields.notes} value={notes} />
-        </React.Fragment>
-      )}
-    />
+      <Form
+        action="https://jsonplaceholder.typicode.com/posts"
+        fields={fields}
+        onFieldUpdate={onFieldUpdate}
+        formValues={{ name, email, reason, notes }}
+        render={() => (
+          <React.Fragment>
+            <div className="alert alert-info" role="alert">
+              If you wish to get in contact, send me a message!
+            </div>
+            <Field {...fields.name} value={name} />
+            <Field {...fields.email} value={email} />
+            <Field {...fields.reason} value={reason} />
+            <Field {...fields.notes} value={notes} />
+          </React.Fragment>
+        )}
+      />
   );
 }
 

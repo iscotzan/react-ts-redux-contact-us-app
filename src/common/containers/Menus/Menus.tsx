@@ -27,7 +27,7 @@ export interface IState {
   isOpen: boolean;
 }
 class Menus extends React.Component<IProps, IState> {
-  constructor(props: any) {
+  constructor(props: IProps) {
     super(props);
 
     this.toggle = this.toggle.bind(this);

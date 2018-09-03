@@ -8,23 +8,16 @@ import Portfolio from "./../../components/Portfolio/Portfolio";
 import PortfolioHeader from "./../../components/Portfolio/PortfolioHeader/PortfolioHeader";
 import AboutSection from "./../../components/AboutSection/AboutSection";
 import ContactSocial from "./../../components/ContactSocial/ContactSocial";
-export interface Props {
+import {StoreState} from "./../../types";
+export interface IProps {
   children?: React.ReactNode;
-  // socialUrls: any;
-  // header: string;
-  // description: any;
   guestName?: string;
 }
 
-export interface State {}
+
 import { Container, Row, Col } from "reactstrap";
 
-class Home extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-
-    this.state = {};
-  }
+class Home extends React.Component<IProps, StoreState> {
 
   render() {
     const goldenRatio = 1.61803398875;
@@ -75,10 +68,8 @@ class Home extends React.Component<Props, State> {
     );
   }
 }
-export function mapStateToProps(state: any) {
+export function mapStateToProps(state: StoreState) {
   const { contactUs } = state;
-  //   console.log("stateToProps: ", contactUs);
-  //   console.log("ze state: ", state);
   return {
     guestName: contactUs.values.name
   };

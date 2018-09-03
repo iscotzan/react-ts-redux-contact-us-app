@@ -26,7 +26,7 @@ ReactDOM.render(
       <div className="App">
         <Menus />
         <div className="wrap">{routes}</div>
-      <Footer />
+        <Footer />
       </div>
     </ConnectedRouter>
   </Provider>,
