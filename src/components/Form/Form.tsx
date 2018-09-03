@@ -163,7 +163,7 @@ export class Form extends React.Component<IFormProps, IFormState> {
           "Content-Type": "application/json",
           Accept: "application/json"
         }),
-        body: JSON.stringify(this.state.values)
+        body: JSON.stringify(this.props.formValues)
       });
       if (response.status === 400) {
         /* Map the validation errors to IErrors */

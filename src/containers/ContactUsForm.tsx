@@ -37,7 +37,8 @@ function ContactUsForm({ name, email, reason, notes, onFieldUpdate }: IProps) {
   };
   return (
       <Form
-        action="https://jsonplaceholder.typicode.com/posts"
+        // action="https://jsonplaceholder.typicode.com/posts"
+        action="https://5b8cf3137366ab0014a29b7b.mockapi.io/api/v1/contact"
         fields={fields}
         onFieldUpdate={onFieldUpdate}
         formValues={{ name, email, reason, notes }}

@@ -43,7 +43,6 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "react-localstorage": "^1.0.0",
     "react-redux": "^5.0.7",
     "react-redux-router": "^0.0.14",
     "react-redux-toastr": "^7.4.0",
