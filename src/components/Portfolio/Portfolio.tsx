@@ -6,7 +6,8 @@ import PortfolioCard from "./PortfolioCard/PortfolioCard";
 const projects = [
   {
     link: "https://guac-a-mole.herokuapp.com/",
-    imageSrc: "./assets/images/guacamole.png",
+    // imageSrc: "./assets/images/guacamole.png",
+    imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/guacamole.png",
     imageAlt: "Guacamole game image",
     Title: "Guac-A-Mole",
     TextContent: `Vegeterian React Version of the Whac-A-Mole game
@@ -15,7 +16,8 @@ const projects = [
   },
   {
     link: "https://github.com/iscotzan/react-ts-redux-contact-us-app",
-    imageSrc: "./assets/images/contactUs.png",
+    // imageSrc: "./assets/images/contactUs.png",
+    imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/contactUs.png",
     imageAlt: "Contact-Us App image",
     Title: "Contact-Us/Portfolio",
     TextContent: `Contact-Us/Portfolio App written in react via
@@ -24,7 +26,8 @@ const projects = [
   },
   {
     link: "http://bridal-studio-project.iscovici.com/home",
-    imageSrc: "./assets/images/bridalStudio.png",
+    // imageSrc: "./assets/images/bridalStudio.png",
+    imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/bridalStudio.png",
     imageAlt: "Bridal Studio Portfolio Site Image",
     Title: "Bridal Studio Project",
     TextContent: `Angular Portfolio website for Ironi-Room bridal studio
@@ -32,7 +35,8 @@ const projects = [
   },
   {
     link: "https://iscotzan.github.io/express-socket.io-chat-app/",
-    imageSrc: "./assets/images/chatapp.jpeg",
+    // imageSrc: "./assets/images/chatapp.jpeg",
+    imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/chatapp.jpeg",
     imageAlt: "Express Socket.io Chat App Image",
     Title: "Express-socket.io-chat-app",
     TextContent: `Real time, neatly designed, multiple users chat. Implementing
@@ -42,7 +46,8 @@ const projects = [
   },
   {
     link: "http://inspirinotes.iscovici.com/home",
-    imageSrc: "./assets/images/inspirinotes.png",
+    // imageSrc: "./assets/images/inspirinotes.png",
+    imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/inspirinotes.png",
     imageAlt: "Inspirinotes Image",
     Title: "Inspirinotes",
     TextContent: `Inspirinotes is an Angular ToDo list project, complete with a
