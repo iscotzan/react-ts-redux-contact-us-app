@@ -25,6 +25,14 @@ const projects = [
     Jest, ReactStrap and more (2018).`
   },
   {
+    link: "https://github.com/iscotzan/groovy-movie",
+    // imageSrc: "./assets/images/contactUs.png",
+    imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/groovymovie.png",
+    imageAlt: "groovy movie app image",
+    Title: "Groovy-Movie app",
+    TextContent: `Groovy-Movie is an angular 7 app demonstrating theMovieDb.org API, Infinite-Scroll, Search-AutoComplete filter and more (2019).`
+  },
+  {
     link: "http://bridal-studio-project.iscovici.com/home",
     // imageSrc: "./assets/images/bridalStudio.png",
     imageSrc: "https://res.cloudinary.com/iscobot/image/upload/v1536067578/projects/contactPortfolio/bridalStudio.png",
@@ -63,17 +71,20 @@ const Porfolio = () => {
       <Container>
         <h1 className="text-center">Open Source Portfolio</h1>
         {/* <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutRight"> */}
-          <CardDeck>
-            <PortfolioCard projectData={projects[0]} />
-            <PortfolioCard projectData={projects[1]} />
-          </CardDeck>
+        <CardDeck>
+          <PortfolioCard projectData={projects[2]} />
+        </CardDeck>
+        <CardDeck>
+          <PortfolioCard projectData={projects[0]} />
+          <PortfolioCard projectData={projects[1]} />
+        </CardDeck>
         {/* </ScrollAnimation> */}
         {/* <ScrollAnimation animateIn="bounceInRight" animateOut="bounceOutLeft"> */}
-          <CardDeck>
-            <PortfolioCard projectData={projects[2]} />
-            <PortfolioCard projectData={projects[3]} />
-            <PortfolioCard projectData={projects[4]} />
-          </CardDeck>
+        <CardDeck>
+          <PortfolioCard projectData={projects[3]} />
+          <PortfolioCard projectData={projects[4]} />
+          <PortfolioCard projectData={projects[5]} />
+        </CardDeck>
         {/* </ScrollAnimation> */}
       </Container>
     </div>
